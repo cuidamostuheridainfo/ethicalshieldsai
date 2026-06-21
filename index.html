@@ -99,12 +99,14 @@ a{text-decoration:none;color:inherit;}
 .bx .bk{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;}
 .bx h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3vw,38px);letter-spacing:-.03em;margin:18px 0 10px;}
 .bx p{font-size:15.5px;line-height:1.55;}
-.bx-teal{background:var(--teal);color:#fff;grid-row:span 2;}
+.bx-teal{background:var(--teal);color:#fff;}
 .bx-teal p{color:rgba(255,255,255,.9);}
 .bx-amber{background:var(--amber);color:var(--navy);}
 .bx-amber p{color:rgba(16,41,77,.78);}
 .bx-navy{background:var(--navy);color:var(--cream);}
 .bx-navy h3{color:#fff;}.bx-navy p{color:rgba(246,240,226,.82);}
+.bx-lead{grid-row:span 2;}
+.bx-cta{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.04em;margin-top:16px;color:var(--amber);}
 /* metodo */
 .steps{display:flex;flex-wrap:wrap;gap:clamp(20px,3vw,44px);margin-top:clamp(34px,4vw,54px);}
 .stp{flex:1 1 120px;}
@@ -131,6 +133,38 @@ a{text-decoration:none;color:inherit;}
 .footer .brand{color:var(--cream);}
 .footer .fl{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.06em;color:#7488A8;text-transform:uppercase;}
 .note{background:var(--ink);color:#54688A;font-family:'Space Mono',monospace;font-size:11px;text-align:center;padding:0 24px 26px;letter-spacing:.04em;}
+/* hero panel (visual + dinamismo) */
+.hero-panel{width:100%;max-width:300px;background:#0B1C36;border-radius:16px;padding:20px 20px 22px;box-shadow:0 24px 60px rgba(11,28,54,.32);}
+.hp-top{display:flex;justify-content:space-between;align-items:center;}
+.hp-lbl{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7E92B2;}
+.hp-score{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:48px;color:#1FB295;line-height:1;letter-spacing:-.03em;margin:8px 0 2px;}
+.hp-row{display:flex;justify-content:space-between;align-items:center;margin-top:13px;font-size:11.5px;color:#A9B6C8;font-family:'Space Mono',monospace;}
+.hp-tag{font-size:10px;padding:2px 8px;border-radius:6px;font-family:'Space Mono',monospace;}
+.hp-tag.a{background:rgba(242,178,75,.16);color:#F2B24B;}
+.hp-tag.t{background:rgba(33,176,147,.18);color:#1FB295;}
+.hp-bar{height:6px;border-radius:4px;background:rgba(255,255,255,.08);margin-top:18px;overflow:hidden;}
+.hp-bar i{display:block;height:100%;width:63%;background:linear-gradient(90deg,#178C73,#F2B24B);border-radius:4px;transform-origin:left;animation:grow 1.5s cubic-bezier(.22,1,.36,1) both;}
+@keyframes grow{from{transform:scaleX(0);}to{transform:scaleX(1);}}
+/* marquee sectores */
+.marquee{background:#10294D;overflow:hidden;border-top:1px solid rgba(246,240,226,.08);border-bottom:1px solid rgba(246,240,226,.08);}
+.mq-track{display:flex;align-items:center;white-space:nowrap;width:max-content;animation:mq 32s linear infinite;}
+.mq-track span{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(17px,2.3vw,28px);color:rgba(246,240,226,.46);padding:16px 26px;letter-spacing:-.02em;}
+.mq-track .dot{color:#178C73;padding:16px 0;}
+.mq-track .more{color:#F2B24B;}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* mercadeo en detalle */
+.mkt-head{margin-top:clamp(40px,5vw,64px);}
+.mkt-head h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(22px,3vw,32px);color:#10294D;letter-spacing:-.025em;margin:6px 0 0;}
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px;}
+.mkt-card{background:#fff;border:1px solid #E7E2D2;border-radius:14px;padding:22px;transition:transform .2s ease;}
+.mkt-card:hover{transform:translateY(-4px);}
+.mkt-card .mk{font-family:'Space Mono',monospace;font-size:12px;color:#0F7F69;letter-spacing:.06em;}
+.mkt-card h4{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#10294D;letter-spacing:-.02em;margin:10px 0 6px;}
+.mkt-card p{font-size:14px;color:#5A6B85;line-height:1.5;}
+/* image placeholders (fotos/capturas reales pendientes) */
+.imgrow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;}
+.imgph{border:1.5px dashed rgba(16,41,77,.26);border-radius:14px;background:rgba(16,41,77,.025);display:flex;align-items:center;justify-content:center;min-height:150px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#5A6B85;text-align:center;padding:18px;line-height:1.6;}
+@media(max-width:820px){.imgrow{grid-template-columns:1fr;}}
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
 .rv.in{opacity:1;transform:none;}
@@ -142,12 +176,14 @@ a{text-decoration:none;color:inherit;}
   .svc-row{grid-template-columns:40px 1fr;gap:10px 16px;}
   .svc-row .ds{grid-column:1/-1;}
   .bento{grid-template-columns:1fr;}
-  .bx-teal{grid-row:auto;}
+  .bx-lead{grid-row:auto;}
   .tray{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){
   .rv{transition:none;opacity:1;transform:none;}
   .btn:hover,.bx:hover,.svc-row:hover{transform:none;}
+  .mq-track{animation:none;}
+  .hp-bar i{animation:none;}
 }
 </style>
 </head>
@@ -186,8 +222,13 @@ a{text-decoration:none;color:inherit;}
         </div>
       </div>
       <div class="hero-mark rv">
-        <div class="sq">
-          <svg viewBox="0 0 56 64" fill="none" aria-hidden="true"><path d="M8 12 L48 12 L48 30 C48 44 40 53 28 58 C16 53 8 44 8 30 Z" fill="#F6F0E2"/><line x1="28" y1="31" x2="20" y2="23" stroke="#F2B24B" stroke-width="2.4" stroke-linecap="round"/><line x1="28" y1="31" x2="36" y2="23" stroke="#F2B24B" stroke-width="2.4" stroke-linecap="round"/><line x1="28" y1="31" x2="28" y2="42" stroke="#F2B24B" stroke-width="2.4" stroke-linecap="round"/><circle cx="28" cy="31" r="4.6" fill="#F2B24B"/><circle cx="20" cy="23" r="2.6" fill="#F2B24B"/><circle cx="36" cy="23" r="2.6" fill="#F2B24B"/><circle cx="28" cy="42" r="2.6" fill="#F2B24B"/></svg>
+        <div class="hero-panel" aria-label="Ejemplo de panel de inteligencia">
+          <div class="hp-top"><span class="hp-lbl">Puntuación estratégica</span><span class="hp-tag t">▲ favorable</span></div>
+          <div class="hp-score" data-count="63">0</div>
+          <div class="hp-row"><span>Riesgos detectados</span><span class="hp-tag a">3 activos</span></div>
+          <div class="hp-row"><span>Fugas operativas</span><span class="hp-tag a">4 señales</span></div>
+          <div class="hp-row"><span>Recomendación IA</span><span class="hp-tag t">lista</span></div>
+          <div class="hp-bar"><i></i></div>
         </div>
       </div>
     </div>
@@ -198,12 +239,19 @@ a{text-decoration:none;color:inherit;}
   <div class="wrap">
     <div class="trust">
       <div class="it"><div class="n">1998</div><div class="l">Año de fundación</div></div>
-      <div class="it"><div class="n t">+25</div><div class="l">Años de experiencia</div></div>
+      <div class="it"><div class="n t" data-count="25" data-prefix="+">+0</div><div class="l">Años de experiencia</div></div>
       <div class="it"><div class="n">Multi</div><div class="l">Manufactura · energía · textil</div></div>
       <div class="it"><div class="n t">Humano</div><div class="l">Control en cada paso</div></div>
     </div>
   </div>
 </section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>Manufactura</span><span class="dot">·</span><span>Energía</span><span class="dot">·</span><span>Textil</span><span class="dot">·</span><span>Comercio</span><span class="dot">·</span><span>Tecnología</span><span class="dot">·</span><span>Servicios financieros</span><span class="dot">·</span><span>Logística</span><span class="dot">·</span><span class="more">y más sectores</span><span class="dot">·</span>
+    <span>Manufactura</span><span class="dot">·</span><span>Energía</span><span class="dot">·</span><span>Textil</span><span class="dot">·</span><span>Comercio</span><span class="dot">·</span><span>Tecnología</span><span class="dot">·</span><span>Servicios financieros</span><span class="dot">·</span><span>Logística</span><span class="dot">·</span><span class="more">y más sectores</span><span class="dot">·</span>
+  </div>
+</div>
 
 <section class="block navy">
   <div class="wrap">
@@ -234,6 +282,17 @@ a{text-decoration:none;color:inherit;}
       <div class="svc-row"><span class="ix">06</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Entendemos tu mercado, tus clientes y tus oportunidades.</span></div>
       <div class="svc-row"><span class="ix">07</span><span class="nm">Contabilidad</span><span class="ds">Orden y soporte para una gestión financiera más sólida.</span></div>
     </div>
+
+    <div class="mkt-head rv">
+      <span class="kick k-teal mb">Mercadeo en detalle</span>
+      <h3>Entiende tu mercado. Crece con estrategia.</h3>
+    </div>
+    <div class="mkt-grid rv">
+      <div class="mkt-card"><span class="mk">01</span><h4>Estudios de mercado</h4><p>Investigamos tu sector, tus clientes y la demanda para que decidas con evidencia, no con corazonadas.</p></div>
+      <div class="mkt-card"><span class="mk">02</span><h4>Estrategia y posicionamiento</h4><p>Definimos tu propuesta, tu mensaje y el lugar que quieres ocupar en el mercado.</p></div>
+      <div class="mkt-card"><span class="mk">03</span><h4>Análisis de competencia con IA</h4><p>Comparamos tu empresa frente al mercado y detectamos oportunidades accionables.</p></div>
+      <div class="mkt-card"><span class="mk">04</span><h4>Mercadeo basado en datos</h4><p>Medimos, priorizamos y orientamos la inversión hacia lo que de verdad da resultados.</p></div>
+    </div>
   </div>
 </section>
 
@@ -242,18 +301,23 @@ a{text-decoration:none;color:inherit;}
     <span class="kick k-amber mb rv">Productos y soluciones de IA</span>
     <h2 class="h-xl rv">IA aplicada a problemas reales,<br>no a la moda.</h2>
     <div class="bento rv">
+      <div class="bx bx-navy bx-lead">
+        <span class="bk">IA financiera · GesPro</span>
+        <div><h3>GesPro</h3><p>Dirección estratégica con expertos e IA. Auditamos finanzas, procesos, mercado y riesgos de forma continua: la IA anticipa riesgos y detecta fugas, y nuestros analistas deciden contigo. No es un software — es acompañamiento. Una solución que ofrecemos, desarrollada por J@RTechnologies.</p></div>
+        <span class="bx-cta">Solicitar diagnóstico →</span>
+      </div>
       <div class="bx bx-teal">
         <span class="bk">Caso real · CTH</span>
-        <div><h3>IA médica · HCAI · IRIS</h3><p>Apoyamos la documentación, la captación y el triaje clínico. La decisión siempre queda en manos del equipo médico. Hoy en producción en una clínica real.</p></div>
+        <div><h3>IA médica · HCAI · IRIS</h3><p>Documentación, captación y triaje clínico. La decisión siempre queda en manos del equipo médico. Hoy en producción en una clínica real.</p></div>
       </div>
       <div class="bx bx-amber">
-        <span class="bk">Finanzas</span>
-        <div><h3>IA financiera</h3><p>Reportes, alertas e indicadores para tener tus números siempre a la vista.</p></div>
-      </div>
-      <div class="bx bx-navy">
         <span class="bk">A medida</span>
         <div><h3>IA a la medida</h3><p>Asistentes, dashboards y automatizaciones diseñados para tu empresa.</p></div>
       </div>
+    </div>
+    <div class="imgrow rv">
+      <div class="imgph">Captura real — Dashboard GesPro<br>(imagen pendiente)</div>
+      <div class="imgph">Captura real — Panel HCAI · IRIS<br>(imagen pendiente)</div>
     </div>
   </div>
 </section>
@@ -327,6 +391,21 @@ a{text-decoration:none;color:inherit;}
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
   els.forEach(function(e){io.observe(e);});
+})();
+(function(){
+  var nums=document.querySelectorAll('[data-count]');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function run(el){
+    var target=parseFloat(el.getAttribute('data-count'))||0;
+    var pre=el.getAttribute('data-prefix')||'';
+    if(reduce){el.textContent=pre+target;return;}
+    var t0=null,dur=1200;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=pre+Math.round(target*e);if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  if(!('IntersectionObserver' in window)){nums.forEach(run);return;}
+  var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);io2.unobserve(en.target);}});},{threshold:.4});
+  nums.forEach(function(e){io2.observe(e);});
 })();
 </script>
 
