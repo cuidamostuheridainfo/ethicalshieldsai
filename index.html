@@ -169,6 +169,18 @@ a{text-decoration:none;color:inherit;}
 .gp-logo{display:inline-flex;align-items:center;gap:8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.03em;color:#fff;margin-bottom:10px;}
 .gp-logo::before{content:"";width:15px;height:15px;border-radius:4px;background:linear-gradient(135deg,#1FB295,#F2B24B);}
 .gp-foot{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.03em;color:rgba(246,240,226,.55)!important;margin-top:14px!important;}
+/* svc categorías */
+.svc-cat{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#0F7F69;padding:clamp(26px,3vw,40px) 0 4px;}
+.svc-cat:first-of-type{padding-top:6px;}
+/* hybrid tag */
+.hyb{display:flex;width:fit-content;align-items:center;gap:7px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-bottom:14px;}
+.hyb::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;}
+.bx-navy .hyb{background:rgba(246,240,226,.1);color:#CBD6E6;}
+.bx-teal .hyb{background:rgba(255,255,255,.18);color:#EAFBF5;}
+.bx-amber .hyb{background:rgba(16,41,77,.12);color:#10294D;}
+/* micro-interacción panel */
+@keyframes pulseTag{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hp-tag.pulse{animation:pulseTag 2.6s ease-in-out infinite;}
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
 .rv.in{opacity:1;transform:none;}
@@ -188,6 +200,7 @@ a{text-decoration:none;color:inherit;}
   .btn:hover,.bx:hover,.svc-row:hover{transform:none;}
   .mq-track{animation:none;}
   .hp-bar i{animation:none;}
+  .hp-tag.pulse{animation:none;}
 }
 </style>
 </head>
@@ -204,7 +217,7 @@ a{text-decoration:none;color:inherit;}
       <a href="#productos">Productos</a>
       <a href="#metodo">Método</a>
       <a href="#trayectoria">Trayectoria</a>
-      <a href="#contacto" class="nav-cta">Agendar →</a>
+      <a href="#contacto" class="nav-cta">Evaluación →</a>
     </span>
   </div>
 </nav>
@@ -221,7 +234,7 @@ a{text-decoration:none;color:inherit;}
       <div class="rv">
         <p class="hero-sub">Consultoría de negocio y financiera potenciada con inteligencia artificial, para empresas que necesitan crecer, ordenar sus procesos y decidir con mayor seguridad.</p>
         <div class="hero-cta">
-          <a href="#contacto" class="btn b-navy">Agendar una reunión</a>
+          <a href="#contacto" class="btn b-navy">Solicitar evaluación estratégica</a>
           <a href="#servicios" class="btn b-line">Explorar soluciones</a>
         </div>
       </div>
@@ -230,7 +243,7 @@ a{text-decoration:none;color:inherit;}
           <div class="hp-top"><span class="hp-lbl">Puntuación estratégica</span><span class="hp-tag t">▲ favorable</span></div>
           <div class="hp-score" data-count="63">0</div>
           <div class="hp-row"><span>Riesgos detectados</span><span class="hp-tag a">3 activos</span></div>
-          <div class="hp-row"><span>Fugas operativas</span><span class="hp-tag a">4 señales</span></div>
+          <div class="hp-row"><span>Fugas operativas</span><span class="hp-tag a pulse">4 señales</span></div>
           <div class="hp-row"><span>Recomendación IA</span><span class="hp-tag t">lista</span></div>
           <div class="hp-bar"><i></i></div>
         </div>
@@ -243,7 +256,7 @@ a{text-decoration:none;color:inherit;}
   <div class="wrap">
     <div class="trust">
       <div class="it"><div class="n">1998</div><div class="l">Año de fundación</div></div>
-      <div class="it"><div class="n t" data-count="25" data-prefix="+">+0</div><div class="l">Años de experiencia</div></div>
+      <div class="it"><div class="n t" data-since="1998" data-prefix="+">+28</div><div class="l">Años de experiencia</div></div>
       <div class="it"><div class="n">Multi</div><div class="l">Manufactura · energía · textil</div></div>
       <div class="it"><div class="n t">Humano</div><div class="l">Control en cada paso</div></div>
     </div>
@@ -278,13 +291,16 @@ a{text-decoration:none;color:inherit;}
     <h2 class="h-xl rv">No solo asesoramos.<br>Implementamos.</h2>
     <p class="lead rv">Consultoría con criterio que te acompaña del diagnóstico a la ejecución.</p>
     <div class="svc rv">
+      <div class="svc-cat">Estrategia y finanzas</div>
       <div class="svc-row"><span class="ix">01</span><span class="nm">Consultoría financiera</span><span class="ds">Ordenamos tus finanzas y te damos reportes e indicadores claros: cuánto ganas de verdad, dónde se va el dinero y qué conviene decidir.</span></div>
       <div class="svc-row"><span class="ix">02</span><span class="nm">Consultoría de negocio</span><span class="ds">Revisamos cómo opera tu empresa y trazamos un plan concreto para crecer con orden, rentabilidad y prioridades claras.</span></div>
-      <div class="svc-row"><span class="ix">03</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Con apoyo de IA analizamos procesos, datos y riesgos, y te mostramos dónde pierdes tiempo o dinero y qué automatizar primero.</span></div>
-      <div class="svc-row"><span class="ix">04</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Detectamos tus riesgos legales y operativos y dejamos procesos seguros, trazables y documentados, para que cumplas sin sobresaltos.</span></div>
+      <div class="svc-row"><span class="ix">03</span><span class="nm">Contabilidad</span><span class="ds">Llevamos tu contabilidad al día y te damos una base ordenada para declarar, planificar y decidir con tranquilidad.</span></div>
+      <div class="svc-cat">Procesos y tecnología</div>
+      <div class="svc-row"><span class="ix">04</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Con apoyo de IA analizamos procesos, datos y riesgos, y te mostramos dónde pierdes tiempo o dinero y qué automatizar primero.</span></div>
       <div class="svc-row"><span class="ix">05</span><span class="nm">Ingeniería de procesos</span><span class="ds">Rediseñamos tus flujos de trabajo para eliminar cuellos de botella y reprocesos: el equipo rinde más con menos fricción.</span></div>
-      <div class="svc-row"><span class="ix">06</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Investigamos tu mercado y tu competencia y te decimos cómo posicionarte y dónde está la oportunidad real de crecer.</span></div>
-      <div class="svc-row"><span class="ix">07</span><span class="nm">Contabilidad</span><span class="ds">Llevamos tu contabilidad al día y te damos una base ordenada para declarar, planificar y decidir con tranquilidad.</span></div>
+      <div class="svc-cat">Riesgo y crecimiento</div>
+      <div class="svc-row"><span class="ix">06</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Detectamos tus riesgos legales y operativos y dejamos procesos seguros, trazables y documentados, para que cumplas sin sobresaltos.</span></div>
+      <div class="svc-row"><span class="ix">07</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Investigamos tu mercado y tu competencia y te decimos cómo posicionarte y dónde está la oportunidad real de crecer.</span></div>
     </div>
 
     <div class="mkt-head rv">
@@ -308,6 +324,7 @@ a{text-decoration:none;color:inherit;}
       <div class="bx bx-navy bx-lead">
         <span class="bk">IA financiera · solución aliada</span>
         <div>
+          <span class="hyb">Humano + IA</span>
           <span class="gp-logo">GesPro</span>
           <p>Un equipo de contadores y analistas vigila tu empresa todos los días, apoyado en una plataforma de IA. Revisan tus finanzas, procesos, mercado y riesgos de forma continua: la IA detecta a tiempo las fugas y las señales de alerta, y tú recibes hallazgos claros, recomendaciones y un plan de acción priorizado —no reportes técnicos que nadie entiende. Te adelantas a los problemas en lugar de reaccionar tarde.</p>
           <p class="gp-foot">Solución que ofrecemos · desarrollada por J@RTechnologies</p>
@@ -316,11 +333,11 @@ a{text-decoration:none;color:inherit;}
       </div>
       <div class="bx bx-teal">
         <span class="bk">Caso real · CTH</span>
-        <div><h3>IA médica · HCAI · IRIS</h3><p>Para clínicas y consultorios: automatiza la captación de pacientes, ordena su información y prioriza los casos por urgencia clínica. El equipo médico siempre decide; la IA le quita la carga administrativa. Hoy en producción en una clínica real (CTH).</p></div>
+        <div><span class="hyb">Humano + IA</span><h3>IA médica · HCAI · IRIS</h3><p>Para clínicas y consultorios: automatiza la captación de pacientes, ordena su información y prioriza los casos por urgencia clínica. El equipo médico siempre decide; la IA le quita la carga administrativa. Hoy en producción en una clínica real (CTH).</p></div>
       </div>
       <div class="bx bx-amber">
         <span class="bk">A medida</span>
-        <div><h3>IA a la medida</h3><p>¿Una tarea repetitiva o un proceso que te consume horas? Diseñamos el asistente, dashboard o automatización a tu medida para resolverlo.</p></div>
+        <div><span class="hyb">Desarrollo propio</span><h3>IA a la medida</h3><p>¿Una tarea repetitiva o un proceso que te consume horas? Diseñamos el asistente, dashboard o automatización a tu medida para resolverlo.</p></div>
       </div>
     </div>
     <div class="imgrow rv">
@@ -376,7 +393,7 @@ a{text-decoration:none;color:inherit;}
     <span class="kick mb rv" style="color:var(--navy);">Conversemos</span>
     <h2 class="rv">Protejamos y potenciemos las decisiones de tu empresa.</h2>
     <div class="row rv">
-      <a href="#" class="btn b-navy">Agendar una reunión</a>
+      <a href="#" class="btn b-navy">Solicitar evaluación estratégica</a>
       <a href="#" class="btn b-line">Escribirnos por WhatsApp</a>
     </div>
   </div>
@@ -401,10 +418,14 @@ a{text-decoration:none;color:inherit;}
   els.forEach(function(e){io.observe(e);});
 })();
 (function(){
-  var nums=document.querySelectorAll('[data-count]');
+  var nums=document.querySelectorAll('[data-count],[data-since]');
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function targetOf(el){
+    if(el.hasAttribute('data-since')){return new Date().getFullYear()-parseInt(el.getAttribute('data-since'),10);}
+    return parseFloat(el.getAttribute('data-count'))||0;
+  }
   function run(el){
-    var target=parseFloat(el.getAttribute('data-count'))||0;
+    var target=targetOf(el);
     var pre=el.getAttribute('data-prefix')||'';
     if(reduce){el.textContent=pre+target;return;}
     var t0=null,dur=1200;
