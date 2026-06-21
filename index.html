@@ -165,6 +165,10 @@ a{text-decoration:none;color:inherit;}
 .imgrow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;}
 .imgph{border:1.5px dashed rgba(16,41,77,.26);border-radius:14px;background:rgba(16,41,77,.025);display:flex;align-items:center;justify-content:center;min-height:150px;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#5A6B85;text-align:center;padding:18px;line-height:1.6;}
 @media(max-width:820px){.imgrow{grid-template-columns:1fr;}}
+/* gespro logo placeholder */
+.gp-logo{display:inline-flex;align-items:center;gap:8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.03em;color:#fff;margin-bottom:10px;}
+.gp-logo::before{content:"";width:15px;height:15px;border-radius:4px;background:linear-gradient(135deg,#1FB295,#F2B24B);}
+.gp-foot{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.03em;color:rgba(246,240,226,.55)!important;margin-top:14px!important;}
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
 .rv.in{opacity:1;transform:none;}
@@ -274,13 +278,13 @@ a{text-decoration:none;color:inherit;}
     <h2 class="h-xl rv">No solo asesoramos.<br>Implementamos.</h2>
     <p class="lead rv">Consultoría con criterio que te acompaña del diagnóstico a la ejecución.</p>
     <div class="svc rv">
-      <div class="svc-row"><span class="ix">01</span><span class="nm">Consultoría financiera</span><span class="ds">Planificación, análisis y control para decidir con números claros.</span></div>
-      <div class="svc-row"><span class="ix">02</span><span class="nm">Consultoría de negocio</span><span class="ds">Estrategia y ejecución para crecer con orden y rentabilidad.</span></div>
-      <div class="svc-row"><span class="ix">03</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Evaluamos procesos, datos y riesgos, y detectamos dónde automatizar.</span></div>
-      <div class="svc-row"><span class="ix">04</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Procesos más seguros, trazables y bien documentados.</span></div>
-      <div class="svc-row"><span class="ix">05</span><span class="nm">Ingeniería de procesos</span><span class="ds">Diseñamos y optimizamos los flujos de tu operación.</span></div>
-      <div class="svc-row"><span class="ix">06</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Entendemos tu mercado, tus clientes y tus oportunidades.</span></div>
-      <div class="svc-row"><span class="ix">07</span><span class="nm">Contabilidad</span><span class="ds">Orden y soporte para una gestión financiera más sólida.</span></div>
+      <div class="svc-row"><span class="ix">01</span><span class="nm">Consultoría financiera</span><span class="ds">Ordenamos tus finanzas y te damos reportes e indicadores claros: cuánto ganas de verdad, dónde se va el dinero y qué conviene decidir.</span></div>
+      <div class="svc-row"><span class="ix">02</span><span class="nm">Consultoría de negocio</span><span class="ds">Revisamos cómo opera tu empresa y trazamos un plan concreto para crecer con orden, rentabilidad y prioridades claras.</span></div>
+      <div class="svc-row"><span class="ix">03</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Con apoyo de IA analizamos procesos, datos y riesgos, y te mostramos dónde pierdes tiempo o dinero y qué automatizar primero.</span></div>
+      <div class="svc-row"><span class="ix">04</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Detectamos tus riesgos legales y operativos y dejamos procesos seguros, trazables y documentados, para que cumplas sin sobresaltos.</span></div>
+      <div class="svc-row"><span class="ix">05</span><span class="nm">Ingeniería de procesos</span><span class="ds">Rediseñamos tus flujos de trabajo para eliminar cuellos de botella y reprocesos: el equipo rinde más con menos fricción.</span></div>
+      <div class="svc-row"><span class="ix">06</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Investigamos tu mercado y tu competencia y te decimos cómo posicionarte y dónde está la oportunidad real de crecer.</span></div>
+      <div class="svc-row"><span class="ix">07</span><span class="nm">Contabilidad</span><span class="ds">Llevamos tu contabilidad al día y te damos una base ordenada para declarar, planificar y decidir con tranquilidad.</span></div>
     </div>
 
     <div class="mkt-head rv">
@@ -302,17 +306,21 @@ a{text-decoration:none;color:inherit;}
     <h2 class="h-xl rv">IA aplicada a problemas reales,<br>no a la moda.</h2>
     <div class="bento rv">
       <div class="bx bx-navy bx-lead">
-        <span class="bk">IA financiera · GesPro</span>
-        <div><h3>GesPro</h3><p>Dirección estratégica con expertos e IA. Auditamos finanzas, procesos, mercado y riesgos de forma continua: la IA anticipa riesgos y detecta fugas, y nuestros analistas deciden contigo. No es un software — es acompañamiento. Una solución que ofrecemos, desarrollada por J@RTechnologies.</p></div>
+        <span class="bk">IA financiera · solución aliada</span>
+        <div>
+          <span class="gp-logo">GesPro</span>
+          <p>Un equipo de contadores y analistas vigila tu empresa todos los días, apoyado en una plataforma de IA. Revisan tus finanzas, procesos, mercado y riesgos de forma continua: la IA detecta a tiempo las fugas y las señales de alerta, y tú recibes hallazgos claros, recomendaciones y un plan de acción priorizado —no reportes técnicos que nadie entiende. Te adelantas a los problemas en lugar de reaccionar tarde.</p>
+          <p class="gp-foot">Solución que ofrecemos · desarrollada por J@RTechnologies</p>
+        </div>
         <span class="bx-cta">Solicitar diagnóstico →</span>
       </div>
       <div class="bx bx-teal">
         <span class="bk">Caso real · CTH</span>
-        <div><h3>IA médica · HCAI · IRIS</h3><p>Documentación, captación y triaje clínico. La decisión siempre queda en manos del equipo médico. Hoy en producción en una clínica real.</p></div>
+        <div><h3>IA médica · HCAI · IRIS</h3><p>Para clínicas y consultorios: automatiza la captación de pacientes, ordena su información y prioriza los casos por urgencia clínica. El equipo médico siempre decide; la IA le quita la carga administrativa. Hoy en producción en una clínica real (CTH).</p></div>
       </div>
       <div class="bx bx-amber">
         <span class="bk">A medida</span>
-        <div><h3>IA a la medida</h3><p>Asistentes, dashboards y automatizaciones diseñados para tu empresa.</p></div>
+        <div><h3>IA a la medida</h3><p>¿Una tarea repetitiva o un proceso que te consume horas? Diseñamos el asistente, dashboard o automatización a tu medida para resolverlo.</p></div>
       </div>
     </div>
     <div class="imgrow rv">
