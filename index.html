@@ -184,6 +184,11 @@ a{text-decoration:none;color:inherit;}
 /* micro-interacción panel */
 @keyframes pulseTag{0%,100%{opacity:1;}50%{opacity:.4;}}
 .hp-tag.pulse{animation:pulseTag 2.6s ease-in-out infinite;}
+.bx-ink{background:var(--ink);color:var(--cream);}
+.bx-ink h3{color:#fff;}.bx-ink p{color:rgba(246,240,226,.82);}
+.bx-ink .hyb{background:rgba(246,240,226,.1);color:#CBD6E6;}
+.bx-wide{grid-column:1 / -1;}
+.prod-note{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.04em;color:var(--muted);margin-top:18px;}
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
 .rv.in{opacity:1;transform:none;}
@@ -279,7 +284,7 @@ a{text-decoration:none;color:inherit;}
     <h2 class="h-xl rv">Si algo de esto te suena,<br>podemos ayudarte.</h2>
     <div class="prob rv">
       <div><span class="i">01</span>Reportes financieros lentos o poco confiables.</div>
-      <div><span class="i">02</span>Pagas impuestos de más al cierre de año por no planificar: casi siempre había una forma legal de pagar menos.</div>
+      <div><span class="i">02</span>Pagas más impuestos de los necesarios por no llevar un manejo financiero ordenado.</div>
       <div><span class="i">03</span>Decisiones que se toman sin datos claros.</div>
       <div><span class="i">04</span>Procesos manuales que consumen horas del equipo.</div>
       <div><span class="i">05</span>Información dispersa entre correos, hojas y WhatsApp.</div>
@@ -296,16 +301,15 @@ a{text-decoration:none;color:inherit;}
     <p class="lead rv">Consultoría con criterio que te acompaña del diagnóstico a la ejecución.</p>
     <div class="svc rv">
       <div class="svc-cat">Estrategia y finanzas</div>
-      <div class="svc-row"><span class="ix">01</span><span class="nm">Planificación fiscal</span><span class="ds">Te ayudamos a pagar lo justo, no de más. Estudiamos dónde operas, identificamos los beneficios, incentivos y convenios fiscales que aplican a tu caso, y diseñamos una estrategia legal para que el cierre de año no te agarre por sorpresa. Resultado: menos impuestos innecesarios, más rentabilidad y todo en regla.</span></div>
-      <div class="svc-row"><span class="ix">02</span><span class="nm">Consultoría financiera</span><span class="ds">Ordenamos tus finanzas y te damos reportes e indicadores claros: cuánto ganas de verdad, dónde se va el dinero y qué conviene decidir.</span></div>
-      <div class="svc-row"><span class="ix">03</span><span class="nm">Consultoría de negocio</span><span class="ds">Revisamos cómo opera tu empresa y trazamos un plan concreto para crecer con orden, rentabilidad y prioridades claras.</span></div>
-      <div class="svc-row"><span class="ix">04</span><span class="nm">Contabilidad</span><span class="ds">Llevamos tu contabilidad al día y te damos una base ordenada para declarar, planificar y decidir con tranquilidad.</span></div>
+      <div class="svc-row"><span class="ix">01</span><span class="nm">Consultoría financiera</span><span class="ds">Ordenamos tus finanzas y te damos reportes e indicadores claros: cuánto ganas de verdad, dónde se va el dinero y qué conviene decidir. Y con un manejo financiero ordenado, aprovechas de forma legal y legítima los beneficios e incentivos que aplican a tu empresa, para pagar lo justo —ni de más— y llegar al cierre de año sin sorpresas.</span></div>
+      <div class="svc-row"><span class="ix">02</span><span class="nm">Consultoría de negocio</span><span class="ds">Revisamos cómo opera tu empresa y trazamos un plan concreto para crecer con orden, rentabilidad y prioridades claras.</span></div>
+      <div class="svc-row"><span class="ix">03</span><span class="nm">Contabilidad</span><span class="ds">Llevamos tu contabilidad al día y te damos una base ordenada para declarar, planificar y decidir con tranquilidad.</span></div>
       <div class="svc-cat">Procesos y tecnología</div>
-      <div class="svc-row"><span class="ix">05</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Con apoyo de IA analizamos procesos, datos y riesgos, y te mostramos dónde pierdes tiempo o dinero y qué automatizar primero.</span></div>
-      <div class="svc-row"><span class="ix">06</span><span class="nm">Ingeniería de procesos</span><span class="ds">Rediseñamos tus flujos de trabajo para eliminar cuellos de botella y reprocesos: el equipo rinde más con menos fricción.</span></div>
+      <div class="svc-row"><span class="ix">04</span><span class="nm">Auditorías de negocio con IA</span><span class="ds">Con apoyo de IA analizamos procesos, datos y riesgos, y te mostramos dónde pierdes tiempo o dinero y qué automatizar primero.</span></div>
+      <div class="svc-row"><span class="ix">05</span><span class="nm">Ingeniería de procesos</span><span class="ds">Rediseñamos tus flujos de trabajo para eliminar cuellos de botella y reprocesos: el equipo rinde más con menos fricción.</span></div>
       <div class="svc-cat">Riesgo y crecimiento</div>
-      <div class="svc-row"><span class="ix">07</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Detectamos tus riesgos legales y operativos y dejamos procesos seguros, trazables y documentados, para que cumplas sin sobresaltos.</span></div>
-      <div class="svc-row"><span class="ix">08</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Investigamos tu mercado y tu competencia y te decimos cómo posicionarte y dónde está la oportunidad real de crecer.</span></div>
+      <div class="svc-row"><span class="ix">06</span><span class="nm">Cumplimiento y riesgo</span><span class="ds">Detectamos tus riesgos legales y operativos y dejamos procesos seguros, trazables y documentados, para que cumplas sin sobresaltos.</span></div>
+      <div class="svc-row"><span class="ix">07</span><span class="nm">Mercadeo y estudios de mercado</span><span class="ds">Investigamos tu mercado y tu competencia y te decimos cómo posicionarte y dónde está la oportunidad real de crecer.</span></div>
     </div>
 
     <div class="mkt-head rv">
@@ -331,21 +335,26 @@ a{text-decoration:none;color:inherit;}
         <div>
           <span class="hyb">Humano + IA</span>
           <span class="gp-logo">GesPro</span>
-          <p>Un equipo de contadores y analistas vigila tu empresa todos los días, apoyado en una plataforma de IA. Revisan tus finanzas, procesos, mercado y riesgos de forma continua: la IA detecta a tiempo las fugas y las señales de alerta, y tú recibes hallazgos claros, recomendaciones y un plan de acción priorizado —no reportes técnicos que nadie entiende. Te adelantas a los problemas en lugar de reaccionar tarde.</p>
+          <p>GesPro te da un <strong>panel de control</strong> con la salud de tu empresa en un solo lugar: finanzas, procesos, riesgos y fugas, con indicadores y alertas en tiempo real. Respaldado por analistas y por IA que vigilan tu negocio de forma continua, <strong>es como tener un equipo cuidando tu empresa todos los días</strong> —para que tomes el control y te adelantes a los problemas en lugar de reaccionar tarde.</p>
           <p style="margin-top:12px;">Y para <strong>ejecutarlas</strong>: su <strong>Kit de 12 aplicaciones</strong> (indicadores, finanzas, cumplimiento, procesos, documentos y más) convierte esos hallazgos en tareas con responsables y seguimiento en tiempo real. <em>GesPro detecta, el Kit ejecuta.</em></p>
           <p class="gp-foot">Solución que ofrecemos · desarrollada por J@RTechnologies</p>
         </div>
         <span class="bx-cta">Solicitar diagnóstico →</span>
       </div>
       <div class="bx bx-teal">
-        <span class="bk">Caso real · CTH</span>
-        <div><span class="hyb">Humano + IA</span><h3>IA médica · HCAI · IRIS</h3><p>Para clínicas y consultorios: automatiza la captación de pacientes, ordena su información y prioriza los casos por urgencia clínica. El equipo médico siempre decide; la IA le quita la carga administrativa. Hoy en producción en una clínica real (CTH).</p></div>
+        <span class="bk">En producción · CTH</span>
+        <div><h3>IRIS</h3><p>Capta a tus pacientes y prioriza los casos por urgencia clínica, con consentimiento y fotos incluidos. La decisión siempre queda en manos del equipo médico. Hoy en producción en una clínica real.</p></div>
       </div>
-      <div class="bx bx-amber">
+      <div class="bx bx-ink">
+        <span class="bk">Historia clínica con IA</span>
+        <div><span class="hyb">Humano + IA</span><h3>HCAI</h3><p>Convierte cada consulta en historia clínica con ayuda de IA: documentas más rápido y ordenado. El equipo médico siempre decide.</p></div>
+      </div>
+      <div class="bx bx-amber bx-wide">
         <span class="bk">A medida</span>
         <div><span class="hyb">Desarrollo propio</span><h3>IA a la medida</h3><p>¿Una tarea repetitiva o un proceso que te consume horas? Diseñamos el asistente, dashboard o automatización a tu medida para resolverlo.</p></div>
       </div>
     </div>
+    <p class="prod-note rv">IRIS y HCAI se ofrecen por separado y pueden integrarse.</p>
     <div class="imgrow rv">
       <div class="imgph">Captura real — Dashboard GesPro<br>(imagen pendiente)</div>
       <div class="imgph">Captura real — Panel HCAI · IRIS<br>(imagen pendiente)</div>
